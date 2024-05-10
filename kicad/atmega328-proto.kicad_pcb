@@ -90,7 +90,7 @@
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(pcbplotparams
-			(layerselection 0x0000000_ffffffff)
+			(layerselection 0x00010fc_ffffffff)
 			(plot_on_all_layers_selection 0x0001000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions no)
@@ -100,7 +100,7 @@
 			(dashed_line_dash_ratio 12.000000)
 			(dashed_line_gap_ratio 3.000000)
 			(svgprecision 4)
-			(plotframeref yes)
+			(plotframeref no)
 			(viasonmask no)
 			(mode 1)
 			(useauxorigin no)
@@ -114,17 +114,17 @@
 			(dxfusepcbnewfont yes)
 			(psnegative no)
 			(psa4output no)
-			(plotreference no)
-			(plotvalue no)
-			(plotfptext no)
+			(plotreference yes)
+			(plotvalue yes)
+			(plotfptext yes)
 			(plotinvisibletext no)
 			(sketchpadsonfab no)
 			(subtractmaskfromsilk no)
-			(outputformat 4)
+			(outputformat 1)
 			(mirror no)
-			(drillshape 2)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "../pdf")
+			(outputdirectory "../gerber")
 		)
 	)
 	(net 0 "")
@@ -1366,7 +1366,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C2"
-			(at 0 -1.85 270)
+			(at 0 -1.85 -90)
 			(layer "F.SilkS")
 			(uuid "0fc60e27-c20a-4540-b0d8-3cd348e31004")
 			(effects
@@ -1377,7 +1377,7 @@
 			)
 		)
 		(property "Value" "20p"
-			(at 0 1.85 270)
+			(at 0 1.85 -90)
 			(layer "F.Fab")
 			(uuid "bca6c5aa-d1d3-4b51-976a-4d606343728f")
 			(effects
@@ -1529,7 +1529,7 @@
 			(uuid "262c547d-5504-4710-996e-8c039f9ec24c")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(uuid "4214a7cf-ec1b-47b9-af9f-8549aea47b37")
 			(effects
@@ -2414,7 +2414,7 @@
 		(descr "Through hole straight pin header, 2x03, 2.54mm pitch, double rows")
 		(tags "Through hole pin header THT 2x03 2.54mm double row")
 		(property "Reference" "J4"
-			(at 1.27 -2.33 270)
+			(at 1.27 -2.33 -90)
 			(layer "F.SilkS")
 			(uuid "3330fe11-6782-4768-a13f-0f28424ce293")
 			(effects
@@ -2425,7 +2425,7 @@
 			)
 		)
 		(property "Value" "AVR-ISP-6"
-			(at 1.27 7.41 270)
+			(at 1.27 7.41 -90)
 			(layer "F.Fab")
 			(uuid "95c85e40-9e73-413c-8382-035fa77436c2")
 			(effects
@@ -2647,7 +2647,7 @@
 			(uuid "65a0b064-1721-4581-b6a0-0e1dcb3da7a0")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.27 2.54 360)
+			(at 1.27 2.54 0)
 			(layer "F.Fab")
 			(uuid "6e56fd33-0ad6-45ea-a5a8-d9ec537dbfdf")
 			(effects
@@ -2955,7 +2955,7 @@
 			(uuid "798ef63d-f588-4bde-a943-1e0b0e212752")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 16.51 270)
+			(at 0 16.51 -90)
 			(layer "F.Fab")
 			(uuid "f5409139-1fbb-4d18-b143-b3e3f9909a85")
 			(effects
@@ -3704,6 +3704,18 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "f4214237-f26a-44b9-a67d-886e207b72fa")
+	)
+	(gr_text "https://github.com/\nuw-madison-chem-shops/\natmega328-proto"
+		(at 107.95 78.74 90)
+		(layer "B.SilkS")
+		(uuid "8267dc19-f3ca-4bf4-86ac-60122bed30a9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify mirror)
+		)
 	)
 	(segment
 		(start 111.76 78.74)
